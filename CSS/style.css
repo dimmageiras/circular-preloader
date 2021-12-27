@@ -1,0 +1,181 @@
+html, body {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.loading {
+  animation: border 3s linear infinite;
+  border-radius: 50%;
+  border-top: .5rem solid #C30048;
+  box-sizing: border-box;
+  height: 10rem;
+  position: relative;
+  width: 10rem;
+}
+
+.loading::before, .loading::after {
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  height: 10rem;
+  left: 0;
+  position: absolute;
+  top: -.5rem;
+  width: 10rem;
+}
+
+.loading::before {
+  border-top: .5rem solid #009661;
+  transform: rotate(120deg);
+}
+
+.loading::after {
+  border-top: .5rem solid #B9DA00;
+  transform: rotate(240deg);
+}
+
+.loading span {
+  animation: text 3s linear infinite, color 3s linear infinite;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  height: 10rem;
+  line-height: 10rem;
+  position: absolute;
+  text-align: center;
+  text-decoration: wavy underline overline;
+  text-underline-position: under;
+  width: 10rem;
+}
+
+.loading span::before {
+  content: "Loading\00a0";
+}
+
+.loading span::after {
+  animation: change 20s linear infinite;
+  content: "5%\00a0";
+}
+
+@keyframes border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes text {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes color {
+  0% {
+    color: #C30048;
+  }
+
+  33.33333% {
+    color: #B9DA00;
+  }
+
+  66.66666% {
+    color: #009661;
+  }
+
+  99.99999% {
+    color: #C30048;
+  }
+}
+
+@keyframes change {
+  0% {
+    content: "5%\00a0";
+  }
+
+  5% {
+    content: "10%\00a0";
+  }
+
+  10% {
+    content: "15%\00a0";
+  }
+
+  15% {
+    content: "20%\00a0";
+  }
+
+  20% {
+    content: "25%\00a0";
+  }
+
+  25% {
+    content: "30%\00a0";
+  }
+
+  30% {
+    content: "35%\00a0";
+  }
+
+  35% {
+    content: "40%\00a0";
+  }
+
+  40% {
+    content: "45%\00a0";
+  }
+
+  45% {
+    content: "50%\00a0";
+  }
+
+  50% {
+    content: "55%\00a0";
+  }
+
+  55% {
+    content: "60%\00a0";
+  }
+
+  60% {
+    content: "65%\00a0";
+  }
+
+  65% {
+    content: "70%\00a0";
+  }
+
+  70% {
+    content: "75%\00a0";
+  }
+
+  75% {
+    content: "80%\00a0";
+  }
+
+  80% {
+    content: "85%\00a0";
+  }
+
+  85% {
+    content: "90%\00a0";
+  }
+
+  90% {
+    content: "95%\00a0";
+  }
+
+  95% {
+    content: "100%\00a0";
+  }
+
+  100% {
+    content: "5%\00a0";
+  }
+}
